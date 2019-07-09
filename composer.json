@@ -1,0 +1,13 @@
+{
+    "name": "khalin/laravel-meta",
+    "description": "Flexible Meta Tags for Laravel Application",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Oleg Khalin",
+            "email": "oleghalinua@gmail.com"
+        }
+    ],
+    "require": {}
+}
