@@ -58,7 +58,7 @@ class SourceTest extends TestCase
 
         $this->source->setManyTags([
             compact('name', 'content'),
-            new MetaTag('x-csrf-token', 'Khalin')
+            new MetaTag('x-csrf-token', 'Khalin'),
         ]);
 
         $name = $this->source->getTag('title');
