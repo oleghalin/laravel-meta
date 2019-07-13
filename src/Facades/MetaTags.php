@@ -2,8 +2,8 @@
 
 namespace Khalin\Meta\Facades;
 
-use Illuminate\Support\Facades\Facade;
 use Khalin\Meta\SourceInterface;
+use Illuminate\Support\Facades\Facade;
 
 /**
  * @method static \Khalin\Meta\SourceInterface getTag($name)
@@ -16,7 +16,7 @@ use Khalin\Meta\SourceInterface;
 class MetaTags extends Facade
 {
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     protected static function getFacadeAccessor()
     {
