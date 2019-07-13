@@ -2,6 +2,7 @@
 
 namespace Khalin\Meta;
 
+use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
 use Khalin\Meta\Sources\ContainerSource;
 
@@ -14,6 +15,8 @@ class MetaTagsServiceProvider extends ServiceProvider
                 __DIR__.'/../config/metatags.php.php' => config_path('metatags.php'),
             ], 'config');
         }
+
+        $this->loadViewsFrom(__DIR__.'/../resources/views', 'metatags');
     }
 
     public function register()
