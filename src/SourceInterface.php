@@ -3,7 +3,6 @@
 namespace Khalin\Meta;
 
 use Illuminate\Support\Collection;
-use Khalin\Meta\MetaTag;
 
 interface SourceInterface
 {

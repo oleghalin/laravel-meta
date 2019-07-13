@@ -2,9 +2,9 @@
 
 namespace Khalin\Meta\Sources;
 
-use Illuminate\Support\Collection;
-use Khalin\Meta\SourceInterface;
 use Khalin\Meta\MetaTag;
+use Khalin\Meta\SourceInterface;
+use Illuminate\Support\Collection;
 
 class ContainerSource implements SourceInterface
 {
