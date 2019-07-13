@@ -2,7 +2,6 @@
 
 namespace Khalin\Meta;
 
-use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
 use Khalin\Meta\Sources\ContainerSource;
 
