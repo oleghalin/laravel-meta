@@ -26,7 +26,7 @@ class ContainerSource implements SourceInterface
         return $this->tags;
     }
 
-    public function setTag($tags, $value = null): SourceInterface
+    public function add($tags, $value = null): SourceInterface
     {
         if ($tags instanceof MetaTag) {
             $this->tags->put($tags->getName(), $tags);
@@ -34,9 +34,9 @@ class ContainerSource implements SourceInterface
             if (is_string($tags) && ! is_null($value)) {
                 $this->tags->put($tags, new MetaTag($tags, $value));
             } elseif (is_array($tags)) {
-                $this->setTag($tags['name'], $tags['content']);
+                $this->add($tags['name'], $tags['content']);
             } else {
-                $this->setTag($tags);
+                $this->add($tags);
             }
         }
 
@@ -47,14 +47,14 @@ class ContainerSource implements SourceInterface
      * @param \Illuminate\Support\Collection|array $collection
      * @return \Khalin\Meta\SourceInterface
      */
-    public function setManyTags($collection): SourceInterface
+    public function addMany($collection): SourceInterface
     {
         if (! $collection instanceof Collection) {
             $collection = collect($collection);
         }
 
         $collection->each(function ($item) {
-            $this->setTag($item);
+            $this->add($item);
         });
 
         return $this;

@@ -41,4 +41,9 @@ class MetaTag
     {
         return $this->content;
     }
+
+    public function render()
+    {
+        return view('metatags::tag', ['tag' => $this]);
+    }
 }

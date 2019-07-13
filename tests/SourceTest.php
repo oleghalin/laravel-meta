@@ -22,7 +22,7 @@ class SourceTest extends TestCase
     public function it_can_set_meta_tag_as_instance()
     {
         $content = 'Laravel Meta Tags';
-        $this->source->setTag(new MetaTag('title', $content));
+        $this->source->add(new MetaTag('title', $content));
 
         $tag = $this->source->getTag('title');
 
@@ -37,7 +37,7 @@ class SourceTest extends TestCase
     public function it_can_set_meta_tag_as_string()
     {
         $content = 'Laravel Meta Tags';
-        $this->source->setTag('title', $content);
+        $this->source->add('title', $content);
 
         $tag = $this->source->getTag('title');
 
@@ -56,7 +56,7 @@ class SourceTest extends TestCase
         $name = 'title';
         $content = 'Laravel Meta Tags';
 
-        $this->source->setManyTags([
+        $this->source->addMany([
             compact('name', 'content'),
             new MetaTag('x-csrf-token', 'Khalin')
         ]);

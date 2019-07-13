@@ -11,7 +11,7 @@ interface SourceInterface
 
     public function getTags(): Collection;
 
-    public function setTag($instance, $value): self;
+    public function add($instance, $value): self;
 
-    public function setManyTags($collection): self;
+    public function addMany($collection): self;
 }
